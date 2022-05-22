@@ -1,0 +1,11 @@
+const { prefix } = require("../utils/properties");
+module.exports.run = async(client, message, args) =>{        
+     
+    await message.channel.send("yo")
+
+};
+module.exports.help = {
+    name:"name",
+    help:"> message",
+    cmd:prefix+"cmd"
+}
