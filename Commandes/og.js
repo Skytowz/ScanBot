@@ -1,7 +1,7 @@
 const { hasRole } = require("../utils/roles");
 module.exports.run = async(client, message, args) =>{ 
     const role = 963735030738341888;
-    if(message.guildId != 942011901653696543) return;
+    if(message.guildId != 670239141996265473) return;
     if(!hasRole(message.member,role)) return message.channel.send("Vous n'avez pas la permission de faire ça");
     if(message.mentions.users.size < 1) return message.channel.send("Veuillez mentionnez une personne");
     if(message.mentions.users.size > 1) return message.channel.send("Veuillez à ne mentionnez qu'une seule personne");
@@ -14,5 +14,5 @@ module.exports.help = {
     name:"og",
     help:"[The OG] > Attribut le role The OG à la personne mentionnée",
     cmd:"og <mention>",
-    server:942011901653696543
+    server:670239141996265473
 }
