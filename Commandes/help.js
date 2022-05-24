@@ -11,7 +11,7 @@ module.exports.run = async(client, message, args) =>{
         const fun = f.filter(f => f.split(".").pop() === "js"); 
         fun.forEach(v => {
             const commande = require(`./${v}`);
-            if(!commande.help.noHelp){
+            if(!commande.help.noHelp && (!commande.help.server || commande.help.server == message.guildId)  ){
                 help.addField(prefix+commande.help.cmd,commande.help.help);
             }
         })
