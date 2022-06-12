@@ -1,8 +1,11 @@
+const { mutedUsers } = require("../Commandes/forceMute");
 const { prefix } = require("../utils/properties");
 
 module.exports = async(client, message) => {
-    
+
     if(message.channel.type === "dm") return;
+
+    if(mutedUsers.includes(message.author)) message.delete();
 
     if(!message.content.startsWith(prefix)) return;
     
