@@ -18,5 +18,5 @@ module.exports.mutedUsers = [];
 module.exports.help = {
     name:"forcemute",
     help:"> [ADMIN] Mute de force un membre",
-    cmd:"fm <mention>"
+    cmd:"forcemute <mention>"
 }

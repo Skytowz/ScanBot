@@ -5,7 +5,7 @@ module.exports = async(client, message) => {
 
     if(message.channel.type === "dm") return;
 
-    if(mutedUsers.includes(message.author)) message.delete();
+    if(mutedUsers.includes(message.author)) return message.delete();
 
     if(!message.content.startsWith(prefix)) return;
     
